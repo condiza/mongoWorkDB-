@@ -1,0 +1,153 @@
+// products.mongodb
+
+use("pet_store")
+
+db.products.drop() // elimina los documentos creados en la colleccion anteriormente
+
+db.products.insertMany([
+  {
+    id:1,
+    title:"grain free",
+    price: 10.0,
+    description: "comida",
+    category: "comida", 
+    image:"https://pukipetshop.com/wp-content/uploads/2020/05/1-C-EQUILIBRIO-GRAIN-FREE-FILHOTE-R.-MINI.jpg"
+  },
+  {
+    id:2,
+    title:"max",
+    price: 6.0,
+    description: "comida",
+    category: "comida", 
+    image:"https://petcol.co/cdn/shop/products/ComidaparaPerroMaxProfessionalLineAdultos_540x.jpg?v=1636471590"
+  },
+  {
+    id:3,
+    title:"rascador",
+    price: 30.0,
+    description: "rascador para gato",
+    category: "gatos", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/WEB-1781754-May23_HP-6TMR3_Favorites_DT"
+  },
+  {
+    id:4,
+    title:"arenero",
+    price: 16.0,
+    description: "caja de arena para gato",
+    category: "gatos", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/WEB-1781754-May23_HP-6TMR4_Favorites_DT"
+  },
+  { id:5,
+    title:"cama para perro",
+    price: 30.0,
+    description: "cama mediana para perro",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/WEB-1781754-May23_HP-6TMR1_Favorites_DT"
+  },
+  { id:6,
+    title:"comida de gato",
+    price: 10.0,
+    description: "comida premium para gato",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/WEB-1781754-May23_HP-6TMR7_Favorites_DT"
+  },
+  { id:7,
+    title:"collar para pero",
+    price: 20.0,
+    description: "collar de cadena para perro",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5285756?$sclp-prd-main_large$"
+  },
+  { id:8,
+    title:"premios para perror",
+    price: 4.5,
+    description: "carne y pollo",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5299587?$sclp-prd-main_large$"
+  },
+  { id:9,
+    title:"jabon",
+    price: 10.0,
+    description: "dejara el pelaje suabe",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5277156?$sclp-prd-main_large$"
+  },
+  { id:10,
+    title:"carne seca",
+    price: 20.0,
+    description: "carne seca para felicitar a un buen amigo",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5303239?$sclp-prd-main_large$"
+  },
+  { id:11,
+    title:"collar para gato",
+    price: 10.0,
+    description: "claleco, no lastimara si piel",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5331387?$sclp-prd-main_large$"
+  },
+  { id:12,
+    title:"racasdor de piso para gato",
+    price: 20.0,
+    description: "racador",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5265992?$sclp-prd-main_large$"
+  },
+  { id:13,
+    title:"pala para la arena",
+    price: 12.5,
+    description: "pala para limpiar más facil la arena de tu minino",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5303630?$sclp-prd-main_large$"
+  },
+  { id:14,
+    title:"pure de carne",
+    price: 19.99,
+    description: "pure de carne apto para el pelaje de tu gato",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5288207?$sclp-prd-main_large$"
+  },
+  { id:15,
+    title:"comida en lata",
+    price: 10.0,
+    description: "para que le cambiarle el menú a tu amigo",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5280669?$sclp-prd-main_large$"
+  },
+  { id:16,
+    title:"miauriguana",
+    price: 9.0,
+    description: "no le hace daño a tu gato",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5279455?$sclp-prd-main_large$"
+  },
+  { id:17,
+    title:"contenedor para la comida",
+    price: 4.0,
+    description: "para guardar los alimentos de tus mascotas",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5337795?$sclp-prd-main_large$"
+  },
+  { id:18,
+    title:"jugete para gato",
+    price: 5.0,
+    description: "sonajero",
+    category: "gato", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5335717?$sclp-prd-main_large$"
+  },
+  { id:19,
+    title:"vestido para perro",
+    price: 6.0,
+    description: "vestido para perro",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5342304?$sclp-prd-main_large$"
+  },
+  { id:20,
+    title:"peluche para perro",
+    price: 10.0,
+    description: "peluche",
+    category: "perro", 
+    image:"https://s7d2.scene7.com/is/image/PetSmart/5340907?$sclp-prd-main_large$"
+  },
+  
+])
