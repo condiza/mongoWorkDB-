@@ -1,0 +1,23 @@
+use("pet_store")
+
+const updates = [
+  { filter: { id: 1 }, update: { $set: { price: 16.0 } } },
+  { filter: { id: 2 }, update: { $set: { title: "grain free 2" } } },
+  { filter: { id: 3 }, update: { $set: { price: 30.0 } } },
+  { filter: { id: 4 }, update: { $set: { title: "caja arena" } } },
+  { filter: { id: 5 }, update: { $set: { price: 20.0 } } },
+  { filter: { id: 6 }, update: { $set: { title: "comida para gato" } } },
+  { filter: { id: 7 }, update: { $set: { price: 20.0 } } },
+  { filter: { id: 8 }, update: { $set: { title: "premios para perro" } } },
+  { filter: { id: 9 }, update: { $set: { price: 15.0 } } },
+  { filter: { id: 10 }, update: { $set: { title: "carne seca" } } },
+];
+
+updates.forEach(({ filter, update }) => {
+  const result = db.products.updateOne(filter, update);
+  if (result.modifiedCount > 0) {
+    print(`Actualizacion correcta del dato de id: ${filter.id}`);
+  }else{
+    print(`Error al actualizar o el dato es el mismo del dato de id: ${filter.id}`);
+  }
+});
